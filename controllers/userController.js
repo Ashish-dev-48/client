@@ -91,15 +91,16 @@ export const login = async (req, res, next) => {
                 expiresIn: '7d'
             });
             return res.status(200).cookie("token", token, {
-                maxAge: 60 * 60 * 24 * 7 * 1000,
-                httpOnly: true,
-                sameSite: 'strict',
-                path: '/'
-            }).json({
-                success: true,
-                token,
-                message: "Login successful",
-            });
+    maxAge: 60 * 60 * 24 * 7 * 1000,
+    httpOnly: true,
+    sameSite: 'none',
+    secure: process.env.NODE_ENV === 'production',
+    path: '/',
+}).json({
+    success: true,
+    message: "Login successful",
+});
+
 
         } else {
             const error = {
