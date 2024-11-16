@@ -8,7 +8,7 @@ export const server = http.createServer(app)
 const userSocketMap = {};
 const io = new Server(server, {
     cors: {
-        origin: *,
+        origin: '*',
         credentials: true
     }
 })
