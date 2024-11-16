@@ -9,7 +9,7 @@ import cookieParser from 'cookie-parser';
 import { app, server } from "./socket/index.js"
 
 const corsOptions = {
-    origin: '*',
+    origin: 'https://client-seven-blond.vercel.app',
     credentials: true,
 };
 
