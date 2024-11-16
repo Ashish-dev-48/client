@@ -8,7 +8,7 @@ export const server = http.createServer(app)
 const userSocketMap = {};
 const io = new Server(server, {
     cors: {
-        origin: 'https://client-seven-blond.vercel.app',
+        origin: 'https://urja-talents.netlify.app',
         credentials: true
     }
 })
