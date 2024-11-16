@@ -9,7 +9,7 @@ import cookieParser from 'cookie-parser';
 import { app, server } from "./socket/index.js"
 
 const corsOptions = {
-    origin: process.env.FRONTEND_URI,
+    origin: *,
     credentials: true,
 };
 
