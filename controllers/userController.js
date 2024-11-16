@@ -97,6 +97,7 @@ export const login = async (req, res, next) => {
                 path: '/'
             }).json({
                 success: true,
+                token,
                 message: "Login successful",
             });
 
